@@ -23,7 +23,40 @@ input {
 }
 
 input[placeholder]{
-    font-weight: 1020px;
+    font-weight: 100;
+}
+
+input::placeholder{
+    font-size: 25px;
+    color: #818181;
+    opacity: 0.6;
+}
+
+input:focus{
+    outline: solid 1px;
+    box-shadow: inset 0 0 0 #1877f2, 0 0 5px #1876f2b7;
+}
+button {
+    height: 65px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border-radius: 7px;
+    /* border: none; */
+   cursor: pointer;
+   /* color: #fff; */
+}
+
+a:hover{
+    text-decoration: underline;
+
+}
+
+a{
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 20px;
 }
 
 body {
@@ -38,4 +71,23 @@ body {
 
 .logo {
     width: 65rem;
+}
+
+.container{
+    display: flex;
+}
+
+.left{
+    background-color: aquamarine;
+    padding: 10%;
+}
+
+.left logo{
+    width: 50%;
+    margin-left: -5%;
+}
+
+.right{
+    background-color: aqua;
+    width: 1200px;
 }
