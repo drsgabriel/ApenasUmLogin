@@ -46,6 +46,8 @@ button {
     /* border: none; */
    cursor: pointer;
    /* color: #fff; */
+   border: none;
+   color: #fff;
 }
 
 a:hover{
@@ -70,7 +72,7 @@ body {
 
 
 .logo {
-    width: 65rem;
+    width: 50rem;
 }
 
 .container{
@@ -78,16 +80,70 @@ body {
 }
 
 .left{
-    background-color: aquamarine;
-    padding: 10%;
+    padding: 5%;
 }
 
 .left logo{
-    width: 50%;
+    width: 15%;
     margin-left: -5%;
 }
 
 .right{
-    background-color: aqua;
-    width: 1200px;
+    width: 50rem;
+}
+
+.right .box{
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px rgba(0,0,0,5);
+}
+
+.right .box .group button{
+    width: 100%;
+    background-color: #1877f2;
+    margin-top: 1px;
+    margin-bottom: 25px;
+    
+}
+
+.right .box .group button:hover{
+    background-color: #1670e6f8;
+
+}
+
+.right .box .create-account{
+    text-align: center;
+    border-top: solid 1px #f0f2f5;
+    margin-top: 30px;
+}
+
+.right .box .create-account button{
+    background-color: #42b72a;
+    margin-top: 25px;
+}
+
+.right .box .create-account button:hover{
+    background-color: #3fad28;
+    margin-top: 25px;
+}
+
+@media screen and (max-width:900px){
+    .container{
+        flex-direction: column;
+    }
+
+    .right{
+        width: auto;
+        padding: 0px 80px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .right{
+        width: auto;
+        padding: 0px 0px;
+    }
 }
