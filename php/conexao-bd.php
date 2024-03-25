@@ -1,35 +1,16 @@
 <?php
+    $hostname = "localhost";
+    $bancodedados = "apenasumlogin";
+    $usuario = "root";
+    $senha = "";
 
-class Database{
-    private $driver;
-    private $host;
-    private $dbname;
-    private $username;
+    // Cria a conexão
+    $conn = new mysqli($hostname, $usuario, $senha, $bancodedados);
 
-    private $conn;
-
-    function __construct(){
-    $this->driver = "mysql";
-    $this->host = "localhost";
-    $this->dbname = "apenasumlogin";
-    $this->username = "root";
-
+    // Verifica a conexão
+    if ($conn->connect_error) {
+        die("Conexão falhou: " . $conn->connect_error);
+    } else {
+        echo "Conexão bem sucedida!";
     }
-
-    function getConnection(){
-        try {
-            $this->conn = new PDO(
-                "$this->driver: host=$this->host; dbname=$this->dbname",
-                $this->username
-            );
-
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-
-            return $this->conn;
-
-        } catch (Exception $e){
-            ECHO $e->getMessage();
-        }
-    }
-}
 ?>
